@@ -1,3 +1,4 @@
+/* Reset default browser styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +8,178 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Code font style */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Header styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+/* Container for the app content */
+.container {
+  max-width: 100%; /* Adjusted for full width */
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
+}
+
+/* Notes list grid */
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted column size */
+}
+
+/* New note style */
+.note.new {
+  background-color: #B2F5EA;
+  transition: box-shadow 0.3s;
+  margin-bottom: 1rem; /* Added margin for better spacing */
+}
+
+/* Remove hover effect for .note.new */
+.note.new:hover {
+  background-color: #B2F5EA;
+  box-shadow: none;
+}
+
+/* Textarea for adding/editing notes */
+textarea, .edit-textarea {
+  border: none;
+  resize: none;
+  transition: box-shadow 0.3s; /* Only transition the box-shadow */
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: #B2F5EA; /* Set default background color */
+  font-size: 1rem; /* Adjusted font size */
+}
+
+/* Remove hover effect for textarea and .edit-textarea */
+textarea:hover, .edit-textarea:hover {
+  background-color: #B2F5EA;
+  box-shadow: none;
+}
+
+/* Ensure background color doesn't change on focus */
+textarea:focus, .edit-textarea:focus {
+  outline: none;
+  background-color: #B2F5EA; /* Keep the same background color */
+}
+
+/* Save button style */
+.save {
+  background-color: black; 
+  color: white; 
+  font-weight: 600;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 15px; /* Adjusted padding */
+  font-size: 0.9rem; /* Adjusted font size */
+  cursor: pointer;
+}
+
+.save:hover {
+  background-color: lavender;
+}
+
+/* Individual note styling */
+.note {
+  background-color: #FFDAB9;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 250px; /* Increased min-height for better visibility */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.note:hover {
+  background-color: #FFE4C4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Delete and edit icons */
+.delete-icon, .edit-icon {
+  cursor: pointer;
+}
+
+/* Search bar styling */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #F1F3F4;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5rem;
+  border: 1px solid black;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.search input {
+  border: none;
+  background-color: #F1F3F4;
+  font-size: 1rem; /* Adjusted font size */
+}
+
+.search input:focus {
+  outline: none;
+}
+
+/* Edit icon styling */
+.edit-icon {
+  cursor: pointer;
+  margin-left: 200px; /* Adjusted margin for position */
+}
+
+/* Responsive textarea edit mode */
+/* Responsive textarea edit mode */
+.edit-textarea {
+  border-radius: 10px; /* Rounded border */
+  transition: box-shadow 0.3s, background-color 0.3s; /* Transition both box-shadow and background-color */
+  border: none;
+  resize: none;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: #B2F5EA; /* Set default background color */
+  font-size: 1rem; /* Adjusted font size */
+  min-height: 170px; /* Adjusted min-height for initial appearance */
+   /* Hide overflow content */
+}
+
+/* Ensure background color doesn't change on focus */
+.edit-textarea:focus {
+  outline: none;
+  background-color: #B2F5EA; /* Keep the same background color */
+}
+
